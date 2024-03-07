@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.sciflare.smsapp.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:name="com.sciflare.smsapp.fragments.SMSFragment"
+        android:label="@string/messages_label"
+        tools:layout="@layout/fragment_sms">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_MessagesFragment_to_CreateSMSFragment"
             app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.sciflare.smsapp.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:name="com.sciflare.smsapp.fragments.SendSMSFragment"
+        android:label="@string/new_conversation_label"
+        tools:layout="@layout/fragment_send_sms">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_CreateSMSFragment_to_MessagesFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
